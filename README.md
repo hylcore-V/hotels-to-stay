@@ -1,80 +1,74 @@
-<h1>Hotels To Stay</h1>
-<h3>Hotel Search Application</h3>
+# Hotels to Stay - Worldwide Hotel and Travel Directory
 
-<p>This is an ASP.NET C# project that allows users to find nearby hotels based on various search criteria. The application provides functionalities like searching for hotels by city, district, state, country, continent, price, and name. Users can also create accounts and add blogs related to their hotel experiences.</p>
+Welcome to Hotels to Stay, your ultimate directory for discovering and booking hotels and accommodations worldwide. Find the perfect place to stay, explore nearby attractions, read user reviews, and share your travel experiences.
 
-<h2>Table of Contents</h2>
+![Hotels to Stay Listings]([http://placestogo.spmpltech.com/images/hotels-to-stay-logo.png](https://coderom.databoltahai.in/Content/projectAssets/Images/Projects/b_1.png))
 
-<ul>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-    </ul>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-</ul>
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Live Demo](#live-demo)
+- [Contributing](#contributing)
+- [License](#license)
 
-<h2>Getting Started</h2>
+## Introduction
 
-<h3>Prerequisites</h3>
+Hotels to Stay is your comprehensive hotel and travel directory, offering an extensive collection of accommodations from around the world. Whether you're planning a business trip or a leisurely vacation, you'll find the ideal place to stay here.
 
-<p>Before you begin, ensure you have met the following requirements:</p>
+### Key Features
 
-<ul>
-    <li><a href="https://visualstudio.microsoft.com/">Visual Studio</a> or another C# development environment.</li>
-    <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server</a> for the database.</li>
-    <li><a href="https://dotnet.microsoft.com/download">.NET SDK</a> for building and running the project.</li>
-</ul>
+- **Search by Name, Keywords, Location, and Category**: Easily find hotels and accommodations by searching for their name, keywords (e.g., "beachfront"), location, or category.
 
-<h3>Installation</h3>
+- **Detailed Hotel Listings**: Each hotel listing provides essential information, including location details, images, descriptions, and user ratings.
 
-<ol>
-    <li>Clone the repository:</li>
-</ol>
+- **Nearby Attractions**: Discover top nearby places to visit and create your itinerary for a memorable stay.
 
-<pre><code>git clone https://github.com/yourusername/your-project.git</code></pre>
+- **User Reviews and Ratings**: Share your hotel experiences by adding reviews and ratings. Read reviews from fellow travelers to make informed choices.
 
-<ol start="2">
-    <li>Open the project in your development environment.</li>
-    <li>Configure the database connection in <code>Web.config</code> to point to your SQL Server instance.</li>
-    <li>Build and run the application.</li>
-</ol>
+- **Blogging**: Create an account, log in, and share your travel stories, tips, and insights through blogs. Engage with a community of passionate travelers.
 
-<h2>Usage</h2>
+- **Mobile-Friendly and Responsive**: Access Hotels to Stay seamlessly on various devices, from desktop to mobile, thanks to its responsive design.
 
-<ol>
-    <li>Visit the live application: <a href="http://placestogo.spmpltech.com/">http://placestogo.spmpltech.com/</a></li>
-    <li>Create an account or log in if you already have one.</li>
-    <li>Use the search functionality to find hotels based on various criteria.</li>
-    <li>Explore and interact with the search results.</li>
-    <li>Add blogs and share your hotel experiences with the community.</li>
-</ol>
+- **Tech Stack**: Built with ASP.NET C#, Entity Framework, and Ajax Search Tools. Developed using Visual Studio 2019 and powered by MS SQL 2014.
 
-<h2>Features</h2>
+## Technologies Used
 
-<ul>
-    <li><strong>Hotel Search</strong>: Search for hotels using various criteria.</li>
-    <li><strong>User Accounts</strong>: Create and manage user accounts.</li>
-    <li><strong>Blogging</strong>: Share hotel experiences and insights through blogs.</li>
-    <li><strong>Database</strong>: Utilizes SQL Server and Entity Framework for data storage and retrieval.</li>
-</ul>
+- ASP.NET C#
+- Entity Framework
+- Ajax Search Tools
+- Visual Studio 2019
+- MS SQL Server 2014
 
-<h2>Contributing</h2>
+## Getting Started
 
-<p>Contributions are welcome! If you'd like to contribute to this project, please follow these steps:</p>
+To get started with Hotels to Stay:
 
-<ol>
-    <li>Fork the repository.</li>
-    <li>Create a new branch for your feature or bug fix.</li>
-    <li>Make your changes and commit them.</li>
-    <li>Push your changes to your fork.</li>
-    <li>Submit a pull request with a detailed description of your changes.</li>
-</ol>
+1. Clone this repository or download the source code.
+2. Open the project in Visual Studio 2019.
+3. Configure the database connection in the Web.config file to point to your MS SQL Server instance.
+4. Use Entity Framework migrations to create the necessary database tables.
+5. Build and run the application.
 
-<h2>License</h2>
+## Live Demo
 
-<p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
+Explore Hotels to Stay live at [http://placestogo.spmpltech.com/](http://placestogo.spmpltech.com/). Start planning your next stay today!
 
+## Contributing
+
+Contributions to Hotels to Stay are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request with a detailed description of your changes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Created with ❤️ by CoderOm
