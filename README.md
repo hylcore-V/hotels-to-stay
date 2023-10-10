@@ -1,4 +1,4 @@
-﻿# Hotels to Stay - Worldwide Hotel and Travel Directory
+# Hotels to Stay - Worldwide Hotel and Travel Directory
 
 Welcome to Hotels to Stay, your ultimate directory for discovering and booking hotels and accommodations worldwide. Find the perfect place to stay, explore nearby attractions, read user reviews, and share your travel experiences.
 
