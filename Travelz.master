@@ -1,0 +1,427 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Travelz.master.cs" Inherits="Travelz" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>The Travel - Tour Travel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/fav.ico" />
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet" />
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialize.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/mob.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <style>
+        .MainSearchBar {
+            color: #333333;
+            padding: 3px;
+            margin-right: 4px;
+            margin-bottom: 8px;
+            font-family: tahoma, arial, sans-serif;
+            background-image: url(images/SearchImg.jpg);
+            background-repeat: repeat-x;
+            border: 1px solid #d2d2ce;
+        }
+
+        .AutoComplite {
+            width: 100%;
+            background-color: white;
+            margin: 0;
+            padding:5px;
+            color: #A4A4A4;
+        }
+
+        .AutoCompliteItem {
+            font-size: 12px;
+            height: 25px;
+            background-color: white;
+            width: 100%;
+            overflow: hidden;
+            color: Black;
+            border-color: #d2d2d2;
+            border-width: 1px;
+            padding: 5px 0px;
+            margin:0px;
+        }
+
+        .AutoCompliteSelectedItem {
+            font-size: 12px;
+            height: 25px;
+            color: #E80732;
+            font-weight: bold;
+            background-color: #eaeaea;
+            width: 100%;
+            overflow: hidden;
+            padding: 5px;
+            transition:0.5s all;
+            cursor:pointer;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Preloader -->
+        <%--        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>--%>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <!-- MOBILE MENU -->
+        <section>
+            <div class="ed-mob-menu">
+                <div class="ed-mob-menu-con">
+                    <div class="ed-mm-left">
+                        <div class="wed-logo" style="width: 100%;">
+                            <a href="Default.aspx">
+                                <h3 style="margin: 10px 0px 0px;">Places To Go</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ed-mm-right">
+                        <div class="ed-mm-menu">
+                            <span class="ed-micon"><i class="fa fa-bars"></i></span>
+                            <div class="ed-mm-inn">
+                                <span class="ed-mi-close"><i class="fa fa-times"></i></span>
+                                <h4><a href="Default.aspx" class="h4">Home</a></h4>
+                                <h4><a href="about.aspx" class="h4">About Us</a></h4>
+                                <h4><a href="all-package.aspx" class="h4">Tour Packages</a></h4>
+                                <ul>
+                                    <li><a href="all-package.aspx">All Package</a></li>
+                                    <li><a href="family-package.aspx">Family Package</a></li>
+                                    <li><a href="honeymoon-package.aspx">Honeymoon Package</a></li>
+                                    <li><a href="group-package.aspx">Group Package</a></li>
+                                    <li><a href="weekend-package.aspx">WeekEnd Package</a></li>
+                                    <li><a href="regular-package.aspx">Regular Package</a></li>
+                                </ul>
+                                <h4><a href="booking.aspx" class="h4">Bookings</a></h4>
+                                <ul>
+                                    <li><a href="booking.aspx">All Bookings</a></li>
+                                    <li><a href="booking-tour-package.aspx">Tour Package Booking</a></li>
+                                    <li><a href="booking-hotel.aspx">Hotel Booking</a></li>
+                                    <li><a href="booking-car-rentals.aspx">Car Rentals Booking</a></li>
+                                    <li><a href="booking-flight.aspx">Flight Booking</a></li>
+                                    <li><a href="discount.aspx">Top Discounts Booking</a></li>
+                                </ul>
+                                <h4><a href="places.aspx" class="h4">Seight Seeing</a></h4>
+                                <h4><a href="hotels-list.aspx" class="h4">Hotels</a></h4>
+                                <h4><a href="blog.aspx" class="h4">Blogs</a></h4>
+                                <h4><a href="contact.aspx" class="h4">Contact Us</a></h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--HEADER SECTION-->
+        <section>
+
+            <!-- TOP BAR -->
+            <div class="ed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ed-com-t1-left">
+                                <ul>
+                                    <li><a href="#">Contact: Sanjay Colony , Bhilwara , Rajasthan , India</a>
+                                    </li>
+                                    <li><a href="#">Phone: +91 89992 92525</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ed-com-t1-right">
+                                <ul>
+                                    <li><a href="login.aspx">Sign In</a>
+                                    </li>
+                                    <li><a href="register.aspx">Sign Up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ed-com-t1-social">
+                                <ul>
+                                    <li><a href="https://www.instagram.com/1ommsharma/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="mailto:omsharma9367@gmail.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="https://www.facebook.com/profile.php?id=100026688728467"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOGO AND MENU SECTION -->
+            <div class="top-logo" data-spy="affix" data-offset-top="250">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wed-logo">
+                                <a href="Default.aspx">
+                                    <h2 class="m-0">Places To Go</h2>
+                                </a>
+                            </div>
+                            <div class="main-menu">
+                                <ul>
+                                    <li><a href="Default.aspx">Home</a></li>
+                                    <li><a href="about.aspx">About</a></li>
+                                    <li class="about-menu">
+                                        <a href="all-package.aspx" class="mm-arr">Packages</a>
+                                        <!-- MEGA MENU 1 -->
+                                        <div class="mm-pos">
+                                            <div class="about-mm m-menu">
+                                                <div class="m-menu-inn">
+                                                    <div class="mm1-com mm1-s1">
+                                                        <div class="ed-course-in">
+                                                            <a class="course-overlay menu-about" href="all-package.aspx">
+                                                                <img src="images/sight/5.jpg" alt="">
+                                                                <span>Popular Package</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mm1-com mm1-s2">
+                                                        <p>Want to change the world? At Berkeley we’re doing just that. When you join the Golden Bear community, you’re part of an institution that shifts the global conversation every single day.</p>
+                                                        <a href="all-package.aspx" class="mm-r-m-btn">Read more</a>
+                                                    </div>
+                                                    <div class="mm1-com mm1-s3">
+                                                        <ul>
+                                                            <li><a href="booking.aspx">Booking</a></li>
+                                                            <li><a href="booking-tour-package.aspx">Tour Package Booking</a></li>
+                                                            <li><a href="booking-hotel.aspx">Hotel Booking</a></li>
+                                                            <li><a href="booking-car-rentals.aspx">Car Rentals Booking</a></li>
+                                                            <li><a href="booking-flight.aspx">Flight Booking</a></li>
+                                                            <li><a href="discount.aspx">Top Discounts Booking</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mm1-com mm1-s4">
+                                                        <ul>
+                                                            <li><a href="all-package.aspx">All Packages</a> </li>
+                                                            <li><a href="family-package.aspx">Family Package</a></li>
+                                                            <li><a href="honeymoon-package.aspx">Honeymoon Package</a></li>
+                                                            <li><a href="group-package.aspx">Group Package</a></li>
+                                                            <li><a href="weekend-package.aspx">WeekEnd Package</a></li>
+                                                            <li><a href="regular-package.aspx">Regular Package</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="places.aspx" class="mm-arr">Seight Seeing</a></li>
+                                    <li><a href="hotels-list.aspx">Hotels</a></li>
+
+                                    <li><a href="blog.aspx">Blogs</a></li>
+
+                                    <li><a href="contact.aspx" class="mm-arr">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOP SEARCH BOX -->
+            <div class="search-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="search-form">
+                                <div class="tourz-search-form">
+
+                                    <div class="input-field1">
+                                        <asp:DropDownList ID="search_category" runat="server" BorderStyle="None" Height="47px" AutoPostBack="true" OnSelectedIndexChanged="search_category_SelectedIndexChanged">
+                                            <asp:ListItem Value="" Selected disabled>Select category</asp:ListItem>
+                                            <asp:ListItem Value="Hotels">Hotels</asp:ListItem>
+                                            <asp:ListItem Value="Place">Place</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+
+                                    <div class="input-field input-field2" runat="server" id="AutoCity">
+                                        <cc1:AutoCompleteExtender ID="AutoCompleteExtProduct" runat="server" ServicePath="~/sellproduct.asmx"
+                                            ServiceMethod="FromSearch" CompletionInterval="10" CompletionListItemCssClass="AutoCompliteItem"
+                                            CompletionListCssClass="AutoComplite" CompletionListHighlightedItemCssClass="AutoCompliteSelectedItem"
+                                            FirstRowSelected="true" MinimumPrefixLength="1" TargetControlID="selectsearch">
+                                        </cc1:AutoCompleteExtender>
+                                        <asp:TextBox ID="selectsearch" CssClass="autosuggest" class="autosuggest" runat="server" BorderStyle="None" Height="47px" placeholder="Search places or cities"></asp:TextBox>
+                                        <asp:Label ID="lblemptysearch" runat="server" Text="" ForeColor="White" Visible="false"></asp:Label>
+                                    </div>
+
+                                    <div class="input-field input-field2" runat="server" id="AutoHotel" visible="false">
+                                        <cc1:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server" ServicePath="~/searchhotelevent.asmx"
+                                            ServiceMethod="FromSearch" CompletionInterval="10" CompletionListItemCssClass="AutoCompliteItem"
+                                            CompletionListCssClass="AutoComplite" CompletionListHighlightedItemCssClass="AutoCompliteSelectedItem"
+                                            FirstRowSelected="true" MinimumPrefixLength="1" TargetControlID="selectsearchhotel">
+                                        </cc1:AutoCompleteExtender>
+                                        <asp:TextBox ID="selectsearchhotel" CssClass="autosuggest" class="autosuggest" runat="server" BorderStyle="None" Height="47px" placeholder="Search hotels"></asp:TextBox>
+                                        <asp:Label ID="lblemptysearchhotel" runat="server" Text="" ForeColor="White" Visible="false"></asp:Label>
+                                    </div>
+
+                                    <div class="input-field input-field3">
+                                        <asp:Button ID="BtnSearch" runat="server" Text="search" class="waves-effect waves-light tourz-sear-btn" OnClick="BtnSearch_Click" />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TOP SEARCH BOX -->
+
+        </section>
+        <!--END HEADER SECTION-->
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <!--====== FOOTER 1 ==========-->
+        <section>
+            <div class="rows">
+                <div class="footer1 home_title tb-space">
+                    <div class="pla1 container">
+                        <!-- FOOTER OFFER 1 -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="disco">
+                                <h3>30%<span>OFF</span></h3>
+                                <h4>Eiffel Tower,Rome</h4>
+                                <p>valid only for 24th Dec</p>
+                                <a href="booking.aspx">Book Now</a>
+                            </div>
+                        </div>
+                        <!-- FOOTER OFFER 2 -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="disco1 disco">
+                                <h3>42%<span>OFF</span></h3>
+                                <h4>Colosseum,Burj Al Arab</h4>
+                                <p>valid only for 18th Nov</p>
+                                <a href="booking.aspx">Book Now</a>
+                            </div>
+                        </div>
+                        <!-- FOOTER MOST POPULAR VACATIONS -->
+                        <div class="col-md-6 col-sm-12 col-xs-12 foot-spec footer_places">
+                            <h4><span>Most Popular</span> Vacations</h4>
+                            <ul>
+                                <li><a href="tour-details.aspx">Angkor Wat</a> </li>
+                                <li><a href="tour-details.aspx">Buckingham Palace</a> </li>
+                                <li><a href="tour-details.aspx">High Line</a> </li>
+                                <li><a href="tour-details.aspx">Sagrada Família</a> </li>
+                                <li><a href="tour-details.aspx">Statue of Liberty </a></li>
+                                <li><a href="tour-details.aspx">Notre Dame de Paris</a> </li>
+                                <li><a href="tour-details.aspx">Taj Mahal</a> </li>
+                                <li><a href="tour-details.aspx">The Louvre</a> </li>
+                                <li><a href="tour-details.aspx">Tate Modern, London</a> </li>
+                                <li><a href="tour-details.aspx">Gothic Quarter</a> </li>
+                                <li><a href="tour-details.aspx">Table Mountain</a> </li>
+                                <li><a href="tour-details.aspx">Bayon</a> </li>
+                                <li><a href="tour-details.aspx">Great Wall of China</a> </li>
+                                <li><a href="tour-details.aspx">Hermitage Museum</a> </li>
+                                <li><a href="tour-details.aspx">Yellowstone</a> </li>
+                                <li><a href="tour-details.aspx">Musée d'Orsay</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== FOOTER 2 ==========-->
+        <section>
+            <div class="rows">
+                <div class="footer">
+                    <div class="container">
+                        <div class="foot-sec2">
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-3 foot-spec foot-com">
+                                        <h4><span>Places</span> To Go</h4>
+                                        <p>World's leading tour and travels Booking website,Over 10+ packages worldwide.</p>
+                                    </div>
+                                    <div class="col-sm-3 foot-spec foot-com">
+                                        <h4><span>Address</span> & Contact Info</h4>
+                                        <p>Contact: Sanjay Colony , Bhilwara , Rajasthan , India</p>
+                                        <p><span class="strong">Phone: </span><span class="highlighted">+91 89992 92525</span> </p>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                        <h4><span>SUPPORT</span> & HELP</h4>
+                                        <ul class="two-columns">
+                                            <li><a href="about.aspx">About Us</a> </li>
+                                            <li><a href="faq.aspx">FAQ</a> </li>
+                                            <li><a href="blog.aspx">Blog </a></li>
+                                            <li><a href="booking.aspx">Booking</a> </li>
+                                            <li><a href="all-package.aspx">Tips</a> </li>
+                                            <li><a href="tips.aspx">Testimonials</a> </li>
+                                            <li><a href="faq.aspx">Frequency Asked Questions</a></li>
+                                            <li><a href="contat.aspx">Contact Us</a> </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3 foot-social foot-spec foot-com">
+                                        <h4><span>Follow</span> with us</h4>
+                                        <p>Join the thousands of other There are many variations of passages of Lorem Ipsum available</p>
+                                        <ul>
+                                            <li><a href="https://www.linkedin.com/in/om-sharma-9abb3a258/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.instagram.com/1ommsharma/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li><a href="mailto:omsharma9367@gmail.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li><a href="https://www.facebook.com/profile.php?id=100026688728467"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== FOOTER - COPYRIGHT ==========-->
+        <section>
+            <div class="rows copy">
+                <div class="container">
+                    <p>Copyrights © 2018 Company Name. All Rights Reserved</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="icon-float">
+                <ul>
+                    <li><a href="#" class="sh">1k
+                        <br>
+                        Share</a> </li>
+                    <li><a href="https://www.linkedin.com/in/om-sharma-9abb3a258/" class="li1"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/1ommsharma/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="mailto:omsharma9367@gmail.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100026688728467"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--========= Scripts ===========-->
+        <script src="js/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/custom.js"></script>
+    </form>
+</body>
+</html>

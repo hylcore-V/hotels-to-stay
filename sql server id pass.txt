@@ -1,0 +1,4 @@
+server source id - 103.190.54.22,1533
+db name - placestogo
+user id - placestogo
+password - placestogo@2530
