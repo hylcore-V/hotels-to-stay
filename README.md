@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hotels To Stay</title>
-</head>
-<body>
 <h1>Hotels To Stay</h1>
 <h3>Hotel Search Application</h3>
 
@@ -84,5 +78,3 @@
 
 <p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
 
-</body>
-</html>
