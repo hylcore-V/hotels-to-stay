@@ -7,7 +7,7 @@
 <h1>Hotels To Stay</h1>
 <h3>Hotel Search Application</h3>
 
-<p>This is a .NET C# Entity Framework project that allows users to find nearby hotels based on various search criteria. The application provides functionalities like searching for hotels by city, district, state, country, continent, price, and name. Users can also create accounts and add blogs related to their hotel experiences.</p>
+<p>This is an ASP.NET C# project that allows users to find nearby hotels based on various search criteria. The application provides functionalities like searching for hotels by city, district, state, country, continent, price, and name. Users can also create accounts and add blogs related to their hotel experiences.</p>
 
 <h2>Table of Contents</h2>
 
@@ -45,24 +45,16 @@
 
 <ol start="2">
     <li>Open the project in your development environment.</li>
-    <li>Configure the database connection string in <code>appsettings.json</code> to point to your SQL Server instance.</li>
-    <li>Run the database migrations to create the necessary tables:</li>
+    <li>Configure the database connection in <code>Web.config</code> to point to your SQL Server instance.</li>
+    <li>Build and run the application.</li>
 </ol>
-
-<pre><code>dotnet ef database update</code></pre>
-
-<ol start="5">
-    <li>Build and run the application:</li>
-</ol>
-
-<pre><code>dotnet run</code></pre>
 
 <h2>Usage</h2>
 
 <ol>
-    <li>Visit the application in your web browser.</li>
+    <li>Visit the live application: <a href="http://placestogo.spmpltech.com/">http://placestogo.spmpltech.com/</a></li>
     <li>Create an account or log in if you already have one.</li>
-    <li>Use the search functionality to find hotels based on city, district, state, country, continent, price, or name.</li>
+    <li>Use the search functionality to find hotels based on various criteria.</li>
     <li>Explore and interact with the search results.</li>
     <li>Add blogs and share your hotel experiences with the community.</li>
 </ol>
