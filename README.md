@@ -11,7 +11,6 @@ Welcome to Hotels to Stay, your ultimate directory for discovering and booking h
 - [Getting Started](#getting-started)
 - [Live Demo](#live-demo)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -65,10 +64,4 @@ Contributions to Hotels to Stay are welcome! If you'd like to contribute to this
 4. Push your changes to your fork.
 5. Submit a pull request with a detailed description of your changes.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Created with ❤️ by [CoderOm]
